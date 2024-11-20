@@ -1,0 +1,56 @@
+.cta-button {
+  @apply inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors;
+}
+
+h2 {
+  @apply text-white;
+}
+
+/* Ensure proper text contrast */
+.text-gray-200 {
+  color: #E5E7EB;
+}
+
+.text-gray-300 {
+  color: #D1D5DB;
+}
+
+.text-gray-400 {
+  color: #9CA3AF;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background image overlay */
+.bg-overlay {
+  @apply absolute inset-0 bg-black/50;
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+}
+
+/* Feature card hover effect */
+.feature-card {
+  @apply transition-transform duration-300 hover:-translate-y-2;
+}
+
+/* Navigation link hover effect */
+.nav-link {
+  @apply relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
